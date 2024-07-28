@@ -2,7 +2,7 @@ import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { createBrowserRouter, RouterProvider, useRouteError } from "react-router-dom";
 
-import Home from "./Layouts/Dashboard";
+import {Home, HomeLoader} from "./Pages/Dashboard";
 
 function ErrorPage() {
   let error = useRouteError()
@@ -23,6 +23,7 @@ function App() {
           <Home />
         </>
       ),
+      loader: HomeLoader,
       errorElement: (
         <>
           <ErrorPage />
